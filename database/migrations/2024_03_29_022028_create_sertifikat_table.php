@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('jenis');
             $table->foreignId('pemilik_id')->constrained('pemilik')->cascadeOnDelete();
             $table->string('nomor');
-            $table->foreignId('kompetensi_id')->nullable()->constrained('kompetensi')->cascadeOnDelete();
+            $table->foreignId('kompetensi_id')->nullable();
             $table->json('unit')->nullable();
             $table->date('tanggal_terbit')->nullable();
             $table->timestamps();
