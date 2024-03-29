@@ -1,7 +1,7 @@
 <div class="container mx-auto py-12">
     <div class="text-center">
         <h1 class="font-bold text-2xl">Sertifikat Digital</h1>
-        <p class="mt-2">
+        <p class="mt-2 mx-4">
             Sertifikat ini adalah dokumen resmi dan valid diterbitkan oleh SMK Plus Al-Farhan untuk {{ $sertifikat->pemilik->nama }}
         </p>
     </div>

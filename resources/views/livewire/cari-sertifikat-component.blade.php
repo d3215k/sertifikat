@@ -4,7 +4,7 @@
             <div class="mx-auto">
                 <img class="size-28" src="{{ asset('images/certificate.png') }}" />
             </div>
-            <div class="mt-4">
+            <div class="mt-4 mx-2">
                 <p class="text-gray-600 text-center">
                     Masukan Nomor sertifikat untuk memeriksa keaslian sertifikat
                 </p>
