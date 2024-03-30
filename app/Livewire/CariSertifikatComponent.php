@@ -14,13 +14,10 @@ class CariSertifikatComponent extends Component
         $sertifikat = Sertifikat::where('nomor', $this->nomor)->first();
 
         if (!$sertifikat) {
-            $this->reset();
             return $this->dispatch('open-modal', id: 'no-data');
         }
 
-        if ($sertifikat) {
-            return $this->redirect(route('tampilkan.sertifikat', ['nomor' => $sertifikat->nomor]), navigate: true);
-        }
+        $this->redirectRoute('tampilkan.sertifikat', ['nomor' => $sertifikat->nomor], navigate: true);
     }
 
     public function render()

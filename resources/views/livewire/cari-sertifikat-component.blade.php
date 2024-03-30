@@ -20,15 +20,15 @@
                     />
 
                     <x-slot name="prefix">
-                        <div wire:loading wire:target="handleSearch">
-                            <x-filament::loading-indicator class="w-10 h-10" />
-                        </div>
-
-                        <div wire:loading.remove wire:target="handleSearch">
+                        <div>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-500 dark:text-gray-400" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                         </div>
                     </x-slot>
                 </x-filament::input.wrapper>
+
+                <div wire:loading wire:target="handleSearch" class="flex justify-center text-primary-600 py-4">
+                    <span>Verifying...</span>
+                </div>
             </div>
         </form>
     </div>
@@ -39,10 +39,10 @@
         alignment="center"
     >
         <x-slot name="heading">
-            <span>Nomor Sertifikat Salah!</span>
+            <span>Whoops!</span>
         </x-slot>
 
-        <div class="text-center">Nomor setifikat yang anda masukan tidak ada di database.</div>
+        <div class="text-center">Sertifikat dengan nomor <span class="font-semibold">{{ $nomor }}</span> tidak ditemukan.</div>
 
     </x-filament::modal>
 
